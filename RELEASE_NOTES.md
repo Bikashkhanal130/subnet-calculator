@@ -1,4 +1,4 @@
-# SUBNET KING 1.0
+# SUBNET KING 1.0 (Version 2)
 
 ## Google Play release notes
 
@@ -11,6 +11,6 @@
 ## Release details
 
 - Version name: 1.0
-- Version code: 1
+- Version code: 2
 - Minimum Android version: Android 9 (API 28)
 - Target Android version: Android 16 (API 36)
