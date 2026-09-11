@@ -23,7 +23,7 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.vlsmcalculator"
+        applicationId = "com.nirmal.subnetcalculator"
         minSdk = 28
         targetSdk = 34
         versionCode = 1

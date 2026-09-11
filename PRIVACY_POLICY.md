@@ -51,4 +51,4 @@ For privacy questions, contact:
 ## App Information
 
 **App name:** SUBNET KING  
-**Package name:** com.example.vlsmcalculator
+**Package name:** com.nirmal.subnetcalculator
