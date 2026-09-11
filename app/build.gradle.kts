@@ -13,11 +13,10 @@ if (signingPropertiesFile.exists()) {
 fun signingValue(name: String): String? =
     providers.environmentVariable(name).orNull ?: signingProperties.getProperty(name)
 
-val keystoreFile = signingValue("VLSM_KEYSTORE_FILE")
-val keystorePassword = signingValue("VLSM_KEYSTORE_PASSWORD")
-val keyAlias = signingValue("VLSM_KEY_ALIAS")
-val keyPassword = signingValue("VLSM_KEY_PASSWORD")
-val hasReleaseSigning = listOf(keystoreFile, keystorePassword, keyAlias, keyPassword).all { it != null }
+val configuredKeystoreFile = signingValue("VLSM_KEYSTORE_FILE")
+val configuredKeystorePassword = signingValue("VLSM_KEYSTORE_PASSWORD")
+val configuredKeyAlias = signingValue("VLSM_KEY_ALIAS")
+val configuredKeyPassword = signingValue("VLSM_KEY_PASSWORD")
 
 android {
     namespace = "com.example.vlsmcalculator"
@@ -34,21 +33,17 @@ android {
     }
 
     signingConfigs {
-        if (hasReleaseSigning) {
-            create("release") {
-                storeFile = file(keystoreFile!!)
-                storePassword = keystorePassword!!
-                this.keyAlias = keyAlias!!
-                this.keyPassword = keyPassword!!
-            }
+        create("release") {
+            storeFile = rootProject.file(configuredKeystoreFile!!)
+            storePassword = configuredKeystorePassword!!
+            keyAlias = configuredKeyAlias!!
+            keyPassword = configuredKeyPassword!!
         }
     }
 
     buildTypes {
         release {
-            if (hasReleaseSigning) {
-                signingConfig = signingConfigs.getByName("release")
-            }
+            signingConfig = signingConfigs.getByName("release")
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
