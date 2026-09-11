@@ -13,4 +13,4 @@
 - Version name: 1.0
 - Version code: 1
 - Minimum Android version: Android 9 (API 28)
-- Target Android version: Android 14 (API 34)
+- Target Android version: Android 16 (API 36)

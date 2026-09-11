@@ -20,12 +20,12 @@ val configuredKeyPassword = signingValue("VLSM_KEY_PASSWORD")
 
 android {
     namespace = "com.example.vlsmcalculator"
-    compileSdk = 34
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.nirmal.subnetcalculator"
         minSdk = 28
-        targetSdk = 34
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0"
 
