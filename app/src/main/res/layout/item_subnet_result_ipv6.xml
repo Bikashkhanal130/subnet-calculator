@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="12dp"
+    app:cardBackgroundColor="@color/result_card_background"
+    app:strokeWidth="2dp"
+    app:strokeColor="@color/primary_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Department Name Header -->
+        <TextView
+            android:id="@+id/tvDepartmentName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Department Name"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary_color"
+            android:gravity="center"
+            android:paddingBottom="12dp"
+            android:background="@drawable/bg_department_header" />
+
+        <!-- Subnet Details -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/assigned_prefix"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/label_text" />
+
+                <TextView
+                    android:id="@+id/tvAssignedPrefix"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2001:db8::/64"
+                    android:textSize="12sp"
+                    android:textColor="@color/value_text"
+                    android:fontFamily="monospace"
+                    android:maxLines="2"
+                    android:gravity="end" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider_color"
+                android:layout_marginVertical="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/subnet_range"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/label_text"
+                android:layout_marginBottom="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/start"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/label_text" />
+
+                <TextView
+                    android:id="@+id/tvSubnetRangeStart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2001:db8::1"
+                    android:textSize="12sp"
+                    android:textColor="@color/value_text"
+                    android:fontFamily="monospace"
+                    android:maxLines="2"
+                    android:gravity="end" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/end"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/label_text" />
+
+                <TextView
+                    android:id="@+id/tvSubnetRangeEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2001:db8::ffff"
+                    android:textSize="12sp"
+                    android:textColor="@color/value_text"
+                    android:fontFamily="monospace"
+                    android:maxLines="2"
+                    android:gravity="end" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
+
+

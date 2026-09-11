@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="12dp"
+    app:cardBackgroundColor="@color/result_card_background"
+    app:strokeWidth="2dp"
+    app:strokeColor="@color/primary_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Department Name Header -->
+        <TextView
+            android:id="@+id/tvDepartmentName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Department Name"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary_color"
+            android:gravity="center"
+            android:paddingBottom="12dp"
+            android:background="@drawable/bg_department_header" />
+
+        <!-- Subnet Details -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/network_address"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/label_text" />
+
+                <TextView
+                    android:id="@+id/tvNetworkAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.0.0.0"
+                    android:textSize="14sp"
+                    android:textColor="@color/value_text"
+                    android:fontFamily="monospace" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/subnet_mask"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/label_text" />
+
+                <TextView
+                    android:id="@+id/tvSubnetMask"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="255.255.255.0"
+                    android:textSize="14sp"
+                    android:textColor="@color/value_text"
+                    android:fontFamily="monospace" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/cidr_prefix"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/label_text" />
+
+                <TextView
+                    android:id="@+id/tvCidrPrefix"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="/24"
+                    android:textSize="14sp"
+                    android:textColor="@color/value_text"
+                    android:fontFamily="monospace" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/divider_color"
+                android:layout_marginVertical="8dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/first_usable_ip"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/label_text" />
+
+                <TextView
+                    android:id="@+id/tvFirstUsableIP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.0.0.1"
+                    android:textSize="14sp"
+                    android:textColor="@color/value_text"
+                    android:fontFamily="monospace" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/last_usable_ip"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/label_text" />
+
+                <TextView
+                    android:id="@+id/tvLastUsableIP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.0.0.254"
+                    android:textSize="14sp"
+                    android:textColor="@color/value_text"
+                    android:fontFamily="monospace" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/broadcast_address"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/label_text" />
+
+                <TextView
+                    android:id="@+id/tvBroadcastAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.0.0.255"
+                    android:textSize="14sp"
+                    android:textColor="@color/value_text"
+                    android:fontFamily="monospace" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/total_usable_hosts"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/label_text" />
+
+                <TextView
+                    android:id="@+id/tvTotalUsableHosts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="254"
+                    android:textSize="14sp"
+                    android:textColor="@color/value_text"
+                    android:fontFamily="monospace" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
+
+
